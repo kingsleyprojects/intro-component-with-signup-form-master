@@ -1,0 +1,238 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// mixin
+@mixin theme($theme: hsl(0, 0%, 66%)) {
+    background: $theme;
+    box-shadow: 0px 7px 1px rgba($theme, 0.25);
+    border-radius: 7px;
+
+}
+
+// extend
+%shared-properties {
+    padding: 15px;
+    text-align: center;
+    border: 0;
+}
+
+// Variables
+$default-margin: 0;
+$default-padding: 0;
+$primary-font: poppins;
+$font-size: 16px;
+$primary-color: hsl(0, 0%, 100%);
+$form-input-color: hsl(249, 10%, 26%);
+$secondary-color: hsl(0, 100%, 74%);
+$destop-bg: url(../images/bg-intro-desktop.png);
+$mobile-bg: url(../images/bg-intro-mobile.png);
+$icon-error: url(../images/icon-error.svg);
+$display: flex;
+$flex-direction: row;
+$flex-wrap: wrap;
+
+
+body {
+    font-family: $primary-font;
+    padding: $default-padding;
+    margin: $default-margin;
+    font-size: $font-size;
+}
+
+.container-fluid {
+    // background: $destop-bg, cover, no-repeat;
+    background: $destop-bg, $secondary-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    display: $display;
+    flex-flow: $flex-direction $flex-wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    >div {
+        width: 46%;
+
+        >h1 {
+            font-size: 44px;
+            font-weight: 700;
+            color: $primary-color;
+        }
+
+        >p {
+            color: $primary-color;
+        }
+
+        >#try-it-free {
+            @include theme($theme:hsl(248, 32%, 49%));
+            @extend %shared-properties;
+
+            >span {
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+form {
+    @include theme($theme: hsl(0, 0%, 100%));
+    padding: 20px 30px;
+    border-radius: 15px;
+
+    >div {
+        margin: auto;
+
+        >input {
+            width: 95%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
+            outline: 0;
+            border: 2px solid $form-input-color;
+            color: $form-input-color;
+        }
+
+        >img {
+            position: absolute;
+            padding: 23px;
+            right: 150px;
+            visibility: hidden;
+        }
+
+        .error-message {
+            font-size: 10.5px;
+            font-weight: bold;
+            text-align: right;
+            font-style: italic;
+            color: $secondary-color;
+            display: none;
+        }
+    }
+
+    >button {
+        @include theme($theme: hsl(154, 59%, 51%));
+        @extend %shared-properties;
+        width: 100%;
+        color: $primary-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    #terms {
+        font-size: 10px;
+        text-align: center;
+        font-weight: 700;
+        color: hsl(246, 25%, 77%);
+        padding-top: 5px;
+
+        span {
+            color: $secondary-color;
+        }
+    }
+}
+
+footer {
+    margin-top: 60px;
+
+    .attribution {
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+
+
+}
+
+/* For Tablet Devices */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+
+        >div {
+            width: 100%;
+
+            >h1 {
+                text-align: center;
+            }
+
+            >p {
+                text-align: center;
+            }
+        }
+
+    }
+
+    form {
+        >div {
+            >img {
+                padding: 22px;
+                right: 120px;
+            }
+        }
+    }
+}
+
+
+
+/* For Mobile Devices */
+@media screen and (max-width: 480px) {
+    .container-fluid {
+        // background: $destop-bg, cover, no-repeat;
+        background: $mobile-bg, $secondary-color;
+
+    }
+
+    .container {
+        width: 90%;
+
+        >div {
+            width: 100%;
+
+            >h1 {
+                font-size: 35px;
+                text-align: center;
+            }
+        }
+
+    }
+
+    form {
+        >div {
+            >img {
+                right: 50px;
+            }
+        }
+    }
+}
+
+/* For Mobile Devices */
+@media screen and (max-width: 375px) {
+    .container {
+        >div {
+            >h1 {
+                font-size: 30px;
+            }
+        }
+
+    }
+
+    form {
+        >div {
+            >img {
+                right: 30px;
+            }
+        }
+    }
+}
