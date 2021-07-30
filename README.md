@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/validated-signup-form-Xa-qQRPRA)
+- Live Site URL: [Add live site URL here](https://kingsleyprojects.github.io/intro-component-with-signup-form-master/)
 
 ## My process
 
@@ -61,7 +61,4 @@ The areas i wish to improve on in the future is mostly on javascript and it Libr
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This helped me to look up some basic javascript functions .
 
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@Kingsleyaham](https://www.frontendmentor.io/profile/Kingsleyaham)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
