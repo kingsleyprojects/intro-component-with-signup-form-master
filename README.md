@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/validated-signup-form-Xa-qQRPRA)
-- Live Site URL: [Add live site URL here](https://kingsleyprojects.github.io/intro-component-with-signup-form-master/)
+- Solution URL:(https://www.frontendmentor.io/solutions/validated-signup-form-Xa-qQRPRA)
+- Live Site URL:(https://kingsleyprojects.github.io/intro-component-with-signup-form-master/)
 
 ## My process
 
