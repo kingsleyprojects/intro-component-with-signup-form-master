@@ -11,15 +11,21 @@ const validateForm = e => {
         if (item.value === '') {
             item.previousElementSibling.style.visibility = 'visible';
             item.nextElementSibling.style.display = 'block';
-            submit.style.opacity = '0.5';
             item.style.borderColor = 'hsl(0, 100%, 74%)';
+        } else {
+            item.previousElementSibling.style.visibility = 'hidden';
+            item.nextElementSibling.style.display = 'none';
+            item.style.borderColor = '#000';
         }
 
         if (!validateEmail(email)) {
             email.previousElementSibling.style.visibility = 'visible';
             email.nextElementSibling.style.display = 'block';
-            submit.style.opacity = '0.5';
             email.style.borderColor = 'hsl(0, 100%, 74%)';
+        } else {
+            email.previousElementSibling.style.visibility = 'hidden';
+            email.nextElementSibling.style.display = 'none';
+            email.style.borderColor = '#000';
         }
     });
 
